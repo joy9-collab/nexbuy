@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 250 20% 98%;
+    --foreground: 250 25% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 250 25% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 250 25% 10%;
+
+    --primary: 270 60% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 250 30% 94%;
+    --secondary-foreground: 250 25% 10%;
+
+    --muted: 250 15% 93%;
+    --muted-foreground: 250 10% 45%;
+
+    --accent: 25 90% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 250 15% 88%;
+    --input: 250 15% 88%;
+    --ring: 270 60% 50%;
+
+    --radius: 0.75rem;
+
+    --success: 152 60% 40%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 250 25% 10%;
+    --badge-trending: 270 60% 50%;
+    --badge-bestseller: 25 90% 55%;
+    --badge-limited: 0 72% 51%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 250 5.3% 26.1%;
+    --sidebar-primary: 270 60% 50%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 250 4.8% 95.9%;
+    --sidebar-accent-foreground: 250 5.9% 10%;
+    --sidebar-border: 250 13% 91%;
+    --sidebar-ring: 270 60% 50%;
+
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  .dark {
+    --background: 250 25% 8%;
+    --foreground: 250 20% 95%;
+    --card: 250 20% 12%;
+    --card-foreground: 250 20% 95%;
+    --popover: 250 20% 12%;
+    --popover-foreground: 250 20% 95%;
+    --primary: 270 60% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 250 15% 18%;
+    --secondary-foreground: 250 20% 95%;
+    --muted: 250 15% 18%;
+    --muted-foreground: 250 10% 60%;
+    --accent: 25 90% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 250 15% 20%;
+    --input: 250 15% 20%;
+    --ring: 270 60% 55%;
+    --sidebar-background: 250 5.9% 10%;
+    --sidebar-foreground: 250 4.8% 95.9%;
+    --sidebar-primary: 270 60% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 250 3.7% 15.9%;
+    --sidebar-accent-foreground: 250 4.8% 95.9%;
+    --sidebar-border: 250 3.7% 15.9%;
+    --sidebar-ring: 270 60% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer components {
+  .nexbuy-container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .product-card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+  .badge-trending {
+    @apply bg-primary text-primary-foreground text-xs font-semibold px-2.5 py-0.5 rounded-full;
+  }
+  .badge-bestseller {
+    @apply bg-accent text-accent-foreground text-xs font-semibold px-2.5 py-0.5 rounded-full;
+  }
+  .badge-limited {
+    @apply bg-destructive text-destructive-foreground text-xs font-semibold px-2.5 py-0.5 rounded-full;
+  }
+}
